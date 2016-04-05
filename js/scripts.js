@@ -33,13 +33,8 @@ Ticket.prototype.totalPrice = function() {
   return totalPrice;
 }
 
-
-
-
 // user interface logic
 $(document).ready(function() {
-
-
   $("#blank form").submit(function(event) {
     event.preventDefault();
     var movieValue = $("#movieName").val();
@@ -50,7 +45,7 @@ $(document).ready(function() {
 
     var ticket = new Ticket (movieValue, timeValue, regularQuantity, childQuantity, seniorQuantity);
 
-    
-
+    $("#totalCost").text("$"+(ticket.totalPrice()).toFixed(2));
+    $("#cost").show();
   });
 });
