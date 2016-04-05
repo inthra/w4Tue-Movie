@@ -19,10 +19,10 @@
             <div>
               <label for="movieName">Movie</label>
               <select id="movieName" class="form-control">
-                <option value="batman-superman">Batman vs Superman</option>
-                <option value="zootopia">Zootopia</option>
-                <option value="the-boss">The Boss</option>
-                <option value="deadpool">Deadpool</option>
+                <option value="new-release">Batman vs Superman</option>
+                <option value="new-release">Zootopia</option>
+                <option value="regular">The Boss</option>
+                <option value="regular">Deadpool</option>
               </select>
             </div>
 
@@ -36,44 +36,56 @@
               </select>
             </div>
 
-            <div>
-              <label for="ticketType">Ticket Type</label>
-              <select id="ticketType" class="form-control">
-                <option value="regular">Regular</option>
-                <option value="child">Child/Student</option>
-                <option value="senior">Senior</option>
-              </select>
-            </div>
-
             <!--How many tickets?-->
-            <div>
-              <label>How many ticket?</label>
-              <label class="radio-inline">
-                <input type="radio" name="quantity" value="1" checked> 1
-              </label>
-              <label class="radio-inline">
-                <input type="radio" name="quantity" value="2"> 2
-              </label>
-              <label class="radio-inline">
-                <input type="radio" name="quantity" value="3"> 3
-              </label>
-              <label class="radio-inline">
-                <input type="radio" name="quantity" value="4"> 4
-              </label>
-              <label class="radio-inline">
-                <input type="radio" name="quantity" value="5"> 5
-              </label>
-              <label class="radio-inline">
-                <input type="radio" name="quantity" value="6"> 6
-              </label>
+            <div class="row">
+              <h4>How many tickets?</h4>
+              <div class="col-md-2">
+                <label for="regularAmount">Regular </label>
+                <select id="regularAmount" >
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label for="childAmount">Child/Student (under 17) </label>
+                <select id="childAmount" >
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <label for="seniorAmount">Senior (75yr+) </label>
+                <select id="seniorAmount" >
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                </select>
+              </div>
             </div>
             <br>
             <!--submit button-->
-            <button type="submit" class="btn btn-success">Find my Ticket</button>
+            <button type="submit" class="btn btn-success">Find My Total Cost</button>
           </form>
         </div>
 
         <!--Show cost-->
+        <div id="cost">
+          <h3>Total cost: <span id="totalCost"></span></h3>
+        </div>
 
       </div>
       <!--End: Row-->
